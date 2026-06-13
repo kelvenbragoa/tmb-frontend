@@ -8,7 +8,7 @@ import * as yup from 'yup';
 // import { debounce } from 'lodash';
 import { useToast } from 'primevue/usetoast';
 import { debounce } from 'lodash-es';
-import { baseURL, storageURL } from '@/service/ApiConstant';
+import { baseURL, storageURL } from '@/service/APIConstant';
 
 import moment from 'moment';
 import axios from 'axios';

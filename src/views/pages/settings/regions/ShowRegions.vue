@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useToast } from 'primevue/usetoast';
-import { baseURL } from '@/service/ApiConstant';
+import { baseURL } from '@/service/APIConstant';
 import moment from 'moment';
 import axios from 'axios';
 

@@ -5,7 +5,7 @@ import { RouterLink, useRouter } from 'vue-router';
 // import { debounce } from 'lodash';
 import { useToast } from 'primevue/usetoast';
 import { debounce } from 'lodash-es';
-import { baseURL } from '@/service/ApiConstant';
+import { baseURL } from '@/service/APIConstant';
 import * as yup from 'yup';
 import { useForm } from 'vee-validate';
 

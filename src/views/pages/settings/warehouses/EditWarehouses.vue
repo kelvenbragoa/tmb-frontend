@@ -11,7 +11,7 @@ import { debounce } from 'lodash-es';
 import moment from 'moment';
 // import { object, string, number, date } from 'yup';
 import * as yup from 'yup';
-import { baseURL, storageURL } from '@/service/ApiConstant';
+import { baseURL, storageURL } from '@/service/APIConstant';
 import axios from 'axios';
 
 

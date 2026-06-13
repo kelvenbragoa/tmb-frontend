@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import axios from 'axios';
 import router from '../../../router';
-import { baseURL } from '@/service/ApiConstant';
+import { baseURL } from '@/service/APIConstant';
 
 // Importações dos componentes PrimeVue
 import Stepper from 'primevue/stepper';

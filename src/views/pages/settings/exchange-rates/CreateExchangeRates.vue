@@ -2,7 +2,7 @@
 import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { useToast } from 'primevue/usetoast';
-import { baseURL } from '@/service/ApiConstant';
+import { baseURL } from '@/service/APIConstant';
 import axios from 'axios';
 
 const router = useRouter();

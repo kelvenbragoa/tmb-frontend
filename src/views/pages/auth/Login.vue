@@ -5,7 +5,7 @@ import AppConfig from '@/layout/AppConfig.vue';
 import { useToast } from 'primevue/usetoast';
 import axios from 'axios';
 import router from '../../../router';
-import { baseURL, baseURL2 } from '@/service/ApiConstant';
+import { baseURL, baseURL2 } from '@/service/APIConstant';
 
 const toast = useToast();
 const username = ref('');

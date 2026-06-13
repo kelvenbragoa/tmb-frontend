@@ -8,7 +8,7 @@ import { ref, onMounted, watch, computed } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import moment from 'moment';
 import { useRouter } from 'vue-router';
-import { baseURL, storageURL } from '@/service/ApiConstant';
+import { baseURL, storageURL } from '@/service/APIConstant';
 import axios from 'axios';
 
 

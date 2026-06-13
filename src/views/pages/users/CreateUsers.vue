@@ -12,7 +12,7 @@ import moment from 'moment';
 // import { object, string, number, date } from 'yup';
 import * as yup from 'yup';
 import axios from 'axios';
-import { baseURL, storageURL } from '@/service/ApiConstant';
+import { baseURL, storageURL } from '@/service/APIConstant';
 
 const router = useRouter();
 const toast = useToast();

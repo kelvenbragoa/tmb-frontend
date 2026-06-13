@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
-import { baseURL } from '@/service/ApiConstant';
+import { baseURL } from '@/service/APIConstant';
 import moment from 'moment';
 import axios from 'axios';
 
