@@ -278,6 +278,24 @@ const printGuiaReceita = () => {
                         </DataTable>
                     </div>
 
+                    <div class="card mb-4" v-if="report.salesByRouteTicket?.length">
+                        <h6 class="text-primary mb-3">Vendas por Tarifas</h6>
+                        <DataTable :value="report.salesByRouteTicket" showGridlines responsiveLayout="scroll">
+                            <Column field="route_name" header="Rota" />
+                            <Column field="ticket_type_name" header="Tipo de Bilhete" />
+                            <Column field="total_tickets" header="Quantidade">
+                                <template #body="{ data }">
+                                    <span class="font-bold">{{ data.total_tickets }}</span>
+                                </template>
+                            </Column>
+                            <Column field="total_amount" header="Total">
+                                <template #body="{ data }">
+                                    <span class="font-bold">{{ formatCurrency(data.total_amount) }}</span>
+                                </template>
+                            </Column>
+                        </DataTable>
+                    </div>
+
                     <div class="card" v-if="report.totalAmountByShiftAndRoute?.length">
                         <h6 class="text-primary mb-3">Total por Turno e Rota</h6>
                         <div v-for="shiftGroup in report.totalAmountByShiftAndRoute" :key="shiftGroup.shift_id" class="mb-4">

@@ -103,10 +103,10 @@ defineExpose({ print });
             </div>
 
             <div class="mb-2" style="font-size: 10px;">
-                Nº de trajectos, <span class="border-bottom border-dark px-1" style="display: inline-block; min-width: 120px;">{{ session.total_tickets_sold || '___________' }}</span> 
+                Nº de trajectos, <span class="border-bottom border-dark px-1" style="display: inline-block; min-width: 120px;"></span> 
                 conforme a discriminação das tarifas abaixo:
                 <span class="ms-2">
-                    Carro Nº <span class="border-bottom border-dark px-1" style="display: inline-block; width: 70px;">{{ session.salesByVehicle && session.salesByVehicle.length > 0 ? session.salesByVehicle[0].vehicle_plate : '____' }}</span> 
+                    Carro Nº <span class="border-bottom border-dark px-1" style="display: inline-block; width: 70px;">{{ session.salesByVehicle && session.salesByVehicle.length > 0 ? session.salesByVehicle[0].vehicle_name : '____' }}</span> 
                     Turno <span class="border-bottom border-dark px-1" style="display: inline-block; width: 100px;">{{ session.shift?.name || '____' }}</span>
                 </span>
             </div>

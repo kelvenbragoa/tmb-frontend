@@ -38,6 +38,8 @@ const formatDate = (date) => {
 
 const salesByTicketType = computed(() => props.report?.salesByTicketType || []);
 
+const salesByRouteTicket = computed(() => props.report?.salesByRouteTicket || []);
+
 const totalAmountByShift = computed(() => props.report?.totalAmountByShift || []);
 
 const totalAmountByShiftAndRoute = computed(() => props.report?.totalAmountByShiftAndRoute || []);
@@ -102,7 +104,7 @@ defineExpose({ print });
                 conforme a discriminação das tarifas abaixo:
             </div>
 
-            <div class="row g-2 mb-2">
+            <!-- <div class="row g-2 mb-2">
                 <div class="col-12">
                     <table class="table table-bordered border-dark border-2 mb-0" style="font-size: 9px;">
                         <thead class="table-secondary">
@@ -131,7 +133,39 @@ defineExpose({ print });
                         </tbody>
                     </table>
                 </div>
+            </div> -->
+
+            <div class="row g-2 mb-2">
+                <div class="col-12">
+                    <table class="table table-bordered border-dark border-2 mb-0" style="font-size: 9px;">
+                        <thead class="table-secondary">
+                            <tr class="text-center fw-bold">
+                                <th class="text-start ps-2" style="width: 40%; padding: 5px;">Venda por Tarifas</th>
+                                <th style="width: 30%; padding: 5px;">Nº de<br>Passageiros</th>
+                                <th style="width: 30%; padding: 5px;">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item, index) in salesByRouteTicket" :key="index" class="text-center">
+                                <td class="text-start ps-2" style="padding: 3px 5px;">{{ formatCurrencySimple(item.price) }}MT - {{ item.ticket_type_name || '____' }}</td>
+                                <td style="padding: 3px 5px;">{{ item.total_tickets }}</td>
+                                <td style="padding: 3px 5px;">{{ formatCurrencySimple(item.total_amount) }}MT</td>
+                            </tr>
+                            <tr v-for="n in Math.max(0, 8 - salesByRouteTicket.length)" :key="'empty-' + n" style="height: 22px;">
+                                <td style="padding: 3px;"></td>
+                                <td style="padding: 3px;"></td>
+                                <td style="padding: 3px;"></td>
+                            </tr>
+                            <tr class="fw-bold table-light text-center">
+                                <td class="text-start ps-2" style="padding: 5px;">TOTAL DO DIA</td>
+                                <td style="padding: 5px;">{{ totalPassengers }}</td>
+                                <td style="padding: 5px;">{{ formatCurrencySimple(totalAmount) }}MT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
 
             <div class="mb-3" v-if="totalAmountByShift.length">
                 <div class="fw-bold mb-1" style="font-size: 10px;">Total por Turno</div>
