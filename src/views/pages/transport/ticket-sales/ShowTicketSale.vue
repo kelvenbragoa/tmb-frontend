@@ -235,6 +235,12 @@ onMounted(() => getId());
                             </div>
 
                             <div class="field">
+                                <label class="font-medium">Paragens:</label>
+                                <p class="mt-1"><strong>Origem:</strong> {{ ticketSale.originRouteStop?.name }}</p>
+                                <p class="mt-1"><strong>Destino:</strong> {{ ticketSale.destinationRouteStop?.name }}</p>
+                            </div>
+
+                            <div class="field">
                                 <label class="font-medium">Preço Original:</label>
                                 <p class="mt-1">{{ formatCurrency(ticketSale.routeTicket?.price) }}</p>
                             </div>

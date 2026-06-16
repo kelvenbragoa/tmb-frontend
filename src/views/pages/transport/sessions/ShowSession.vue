@@ -458,6 +458,12 @@ onMounted(() => getId());
                                     </template>
                                 </Column>
                                 <Column field="route_name" header="Rota"></Column>
+                                <!-- <Column header="Paragens">
+                                    <template #body="{ data }">
+                                        <p class=""><strong>Origem:</strong> {{ data.originRouteStop?.name }}</p>
+                                        <p class=""><strong>Destino:</strong> {{ data.destinationRouteStop?.name }}</p>
+                                    </template>
+                                </Column> -->
                                 <Column field="ticket_type_name" header="Tipo de Bilhete"></Column>
                                 <Column field="quantity" header="Qtd.">
                                     <template #body="{ data }">

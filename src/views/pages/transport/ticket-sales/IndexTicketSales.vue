@@ -272,6 +272,13 @@ onMounted(async () => {
                         </template>
                     </Column>
 
+                    <Column header="Paragens">
+                        <template #body="{ data }">
+                            <p class=""><strong>Origem:</strong> {{ data.originRouteStop?.name }}</p>
+                            <p class=""><strong>Destino:</strong> {{ data.destinationRouteStop?.name }}</p>
+                        </template>
+                    </Column>
+
                     <Column header="Tipo de Bilhete">
                         <template #body="{ data }">
                             <Tag :value="data.routeTicket?.ticketType?.code + ' - ' + data.routeTicket?.ticketType?.name" severity="info" />
