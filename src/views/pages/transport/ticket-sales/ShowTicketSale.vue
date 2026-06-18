@@ -157,7 +157,7 @@ onMounted(() => getId());
 
                             <div class="field">
                                 <label class="font-medium">Data/Hora da Venda:</label>
-                                <p class="mt-1">{{ moment(ticketSale.sold_at).format('DD/MM/YYYY HH:mm:ss') }}</p>
+                                <p class="mt-1">{{ moment(ticketSale.ticket_sold_at).format('DD/MM/YYYY HH:mm:ss') }}</p>
                             </div>
 
                             <div class="field">
@@ -261,13 +261,13 @@ onMounted(() => getId());
                                 <div class="col-12 md:col-3">
                                     <div class="field">
                                         <label class="font-medium">Criado em:</label>
-                                        <p class="mt-1">{{ moment(ticketSale.created_at).format('DD/MM/YYYY HH:mm') }}</p>
+                                        <p class="mt-1">{{ moment(ticketSale.createdAt).format('DD/MM/YYYY HH:mm:ss') }}</p>
                                     </div>
                                 </div>
                                 <div class="col-12 md:col-3">
                                     <div class="field">
                                         <label class="font-medium">Atualizado em:</label>
-                                        <p class="mt-1">{{ moment(ticketSale.updated_at).format('DD/MM/YYYY HH:mm') }}</p>
+                                        <p class="mt-1">{{ moment(ticketSale.updatedAt).format('DD/MM/YYYY HH:mm:ss') }}</p>
                                     </div>
                                 </div>
                                 <div class="col-12 md:col-3">
