@@ -13,15 +13,15 @@ import { useRouter } from 'vue-router';
 // export const styleURL = 'http://3.145.1.182:4000/api/v1';
 // export const storageURL = 'http://3.145.1.182:4000/uploads/products/';
 
-export const baseURL2 = 'http://localhost:3000/api/v1';
-export const baseURL = 'http://localhost:3000/api/v1';
-export const styleURL = 'http://localhost:3000/api/v1';
-export const storageURL = 'http://localhost:3000/uploads/products/';
+// export const baseURL2 = 'http://localhost:3000/api/v1';
+// export const baseURL = 'http://localhost:3000/api/v1';
+// export const styleURL = 'http://localhost:3000/api/v1';
+// export const storageURL = 'http://localhost:3000/uploads/products/';
 
-// export const baseURL2 = 'https://tmb.co.mz/api/api/v1';
-// export const baseURL = 'https://tmb.co.mz/api/api/v1';
-// export const styleURL = 'https://tmb.co.mz/api/api/v1';
-// export const storageURL = 'https://tmb.co.mz/api/uploads/products/';
+export const baseURL2 = 'https://tmb.co.mz/api/api/v1';
+export const baseURL = 'https://tmb.co.mz/api/api/v1';
+export const styleURL = 'https://tmb.co.mz/api/api/v1';
+export const storageURL = 'https://tmb.co.mz/api/uploads/products/';
 
 
 export function logout() {
